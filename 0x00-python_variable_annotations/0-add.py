@@ -4,7 +4,7 @@ python function
 """
 
 
-def add(float: a, float: b) -> float:
+def add(a: float, b: float) -> float:
     """
     function to add two numbers
     """
