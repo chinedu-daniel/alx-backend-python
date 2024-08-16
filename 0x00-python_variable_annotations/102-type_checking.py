@@ -15,6 +15,7 @@ def zoom_array(lst: Tuple, factor: int = 2) -> List:
     ]
     return zoomed_in
 
+
 array = tuple([12, 72, 91])
 
 zoom_2x = zoom_array(array)
