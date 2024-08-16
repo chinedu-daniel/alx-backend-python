@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """
 complex types - lists of floats
 """
