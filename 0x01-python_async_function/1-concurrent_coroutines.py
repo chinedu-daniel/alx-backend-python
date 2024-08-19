@@ -3,7 +3,7 @@
 Execute multiple coroutines at the same time
 """
 from typing import List
-import asyncioi
+import asyncio
 wait_random = __import__("0-basic_async_syntax").wait_random
 
 
