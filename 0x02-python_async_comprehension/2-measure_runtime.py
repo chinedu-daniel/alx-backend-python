@@ -3,15 +3,20 @@
 Run time for four parallel comprehensions
 """
 import asyncio
-import time
+from time import perf_counter
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
-async def measure_runtime():
+async def measure_runtime() -> float:
     """
     coroutine that will execute async_comprehension four times
     """
-    start_time = time.perf_counter()
-    await async_function()
-    end_time = time.perf_counter()
-    print(f"Runtime: {end_time - start_time:.4f} seconds")
+    start = perf_counter()
+    arr = []
+    for _ in range(4):
+        arr.append(async_comprehension())
+
+    await asyncio.gather(*arr)
+
+    times = perf_counter() - start
+    return times
