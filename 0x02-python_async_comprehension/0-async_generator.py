@@ -4,7 +4,7 @@ Async Generator
 """
 import random
 import asyncio
-import time 
+import time
 
 
 async def async_generator():
@@ -13,4 +13,4 @@ async def async_generator():
     """
     for i in range(10):
         await asyncio.sleep(1)
-        yield i
+        yield random.randint(0, 10)
