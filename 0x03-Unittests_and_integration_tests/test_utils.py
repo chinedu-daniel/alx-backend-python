@@ -30,9 +30,9 @@ class TestAccessNestedMap(unittest.TestCase):
         context manager to test that a KeyError
         """
         with self.assertRaises(KeyError) as context:
-            access_nested_map(nested_map, path=path)
+            access_nested_map(nested_map, path)
 
-        self.assertEqual(str(context.exception), str(path[-1]))
+        self.assertEqual(str(context.exception), f"'{path[-1]}'"))
 
 
 if __name__ == "__main__":
