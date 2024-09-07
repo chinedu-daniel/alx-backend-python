@@ -46,7 +46,7 @@ class TestGetJson(unittest.TestCase):
         ("http://example.com", {"payload": True}),
         ("http://holberton.io", {"payload": False})
     ])
-    def test_get_json(self, test_url, test_payload, mock_get):
+    def test_get_json(self, url, payload, mock_get):
         """
         To test that utils.get_json returns the expected result
         """
