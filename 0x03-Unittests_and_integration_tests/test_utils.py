@@ -41,7 +41,7 @@ class TestGetJson(unittest.TestCase):
     """
     Mock HTTP calls
     """
-    @patch('utils.requests.get')
+    @patch("utils.requests.get")
     @parameterized.expand([
         ("http://example.com", {"payload": True}),
         ("http://holberton.io", {"payload": False})
@@ -55,7 +55,7 @@ class TestGetJson(unittest.TestCase):
 
         mock_get.return_value = mock_response
 
-        result = get_json(test_url)
+        result = get_json(url)
 
         self.assertEqual(result, payload)
 
